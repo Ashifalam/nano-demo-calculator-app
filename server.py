@@ -2,12 +2,10 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.route('/calculator/greeting', methods=['GET'])
+
+@app.route("/calculator/greeting", methods=['GET'])
 def greeting():
-    response = {
-        'message': 'Hello world!'
-    }
-    return jsonify(response), 200
+    return 'Hello world!', 200
 
 @app.route('/calculator/add', methods=['POST'])
 def add():
